@@ -6,7 +6,7 @@
 
 # Branch Deploy context: all deploys that are not from a pull/merge request or
 # from the Production branch will inherit these settings.
-[context.dev.environment]
+[context.staging.environment]
   NODE_ENV = "production"
 [context.branch-deploy.environment]
   NODE_ENV = "development"
