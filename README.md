@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fusy-editor
 
-## Available Scripts
+The aim is to produce a text editor [PWA](https://developers.google.com/web/progressive-web-apps/) able to synchronise notes through a propriatery API, EverNote, or OneNote.
 
-In the project directory, you can run:
+## Live application
 
-### `npm start`
+You can find the most recent prototype at this address: [fusy-editor.netlify.com](https://fusy-editor.netlify.com/)
 
-Runs the app in the development mode.<br>
+## Run the app
+
+`npm start` runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+## Testing
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm test` launches the test runner in the interactive watch mode.
+The deployment process runs all tests automatically on each push/pull request for the **dev**, **staging** and **master** branches.
 
-### `npm run build`
+## Deployment
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is deployed automatically through [netlify](https://www.netlify.com/).
+The website is only published when a push/pull request deployment succeeds on master branch.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## How to contribute
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Linting and formatting
 
-### `npm run eject`
+This project follows the [AirBnB React guidestyle](https://github.com/airbnb/javascript/tree/master/react) throught the use of [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[lint-staged](https://www.npmjs.com/package/lint-staged) runs eslint and prettier automatically when trying to commit to the repository. If you are able to commit your changes, you should be fine!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### CRA (Create React App)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Learn More
+### Draft.Js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project uses [Draft.Js](https://draftjs.org/) to build a simple, yet powerful, rich text editor.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Service Worker
 
-### Code Splitting
+This project uses a Service Worker](https://developers.google.com/web/fundamentals/primers/service-workers/) to allow an offline experience.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### IndexedDB
 
-### Analyzing the Bundle Size
+This project uses the browser's [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to manage its client-side storage.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Netlify
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is deployed and tested automatically through [netlify](https://www.netlify.com/).
