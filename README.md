@@ -2,6 +2,15 @@
 
 The aim is to produce a text editor [PWA](https://developers.google.com/web/progressive-web-apps/) able to synchronise notes through a propriatery API, EverNote, or OneNote.
 
+# TOC
+
+- [Live application](#live-application)
+- [Run the app](#run-the-app)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [How to contribute](#how-to-contribute)
+- [Tech stack](#tech-stack)
+
 ## Live application
 
 You can find the most recent prototype at this address: [fusy-editor.netlify.com](https://fusy-editor.netlify.com/)
@@ -25,6 +34,17 @@ This project is deployed automatically through [netlify](https://www.netlify.com
 The website is only published when a push/pull request deployment succeeds on master branch.
 
 ## How to contribute
+
+### Pull requests
+
+This project follows the [Fork/Pull Request workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
+
+- Fork the project
+- Checkout master (to start working from the master branch)
+- Create and checkout a feature branch
+- Work on your feature and get it working and passing the tests
+- Clean the git history by rebasing
+- Submit your pull request
 
 ### Linting and formatting
 
