@@ -1,0 +1,39 @@
+@import '../Style/Colours.scss';
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $toolbar-background;
+  border-bottom: 3px solid $toolbar-border;
+  box-sizing: border-box;
+  // Make the toolbar allways fill its parent container
+  width: 100%;
+  height: 100%;
+  // Removing default list styling
+  margin-block-start: 0;
+  margin-block-end: 0;
+  list-style-type: none;
+}
+
+.toolbar_item {
+  margin: 0 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  font-size: 0.75rem;
+}

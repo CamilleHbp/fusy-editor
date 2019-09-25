@@ -1,0 +1,10 @@
+@import '../Style/Colours.scss';
+
+.editor {
+  box-sizing: border-box;
+  background-color: $editor-background;
+  padding: 2rem;
+  // Fill the parent container
+  height: 100%;
+  width: 100%;
+}

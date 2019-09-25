@@ -1,41 +1,6 @@
-.editor {
+.editor-container {
   grid-area: editor;
-  background-color: hsl(0, 0, 80%);
-  margin: 0 3rem 3rem 3rem;
-  padding: 2rem;
-}
-
-.editor-menu {
-  grid-area: menu;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  background-color: hsl(0, 0, 60%);
-  margin: 1rem 3rem 0 3rem;
-  border-bottom: 3px solid hsl(0, 0, 40%);
-  box-sizing: border-box;
-}
-.editor-menu_item {
-  margin: 0 1rem;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.strikethrough {
-  text-decoration: line-through;
-  font-size: 0.75rem;
+  margin: 0 3rem 1rem 3rem;
 }
 
 .editor-layout {
@@ -43,7 +8,14 @@
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr 8fr;
   grid-template-areas:
-    'left menu right'
+    'left toolbar right'
     'left editor right';
+  //Fill the parent container
   height: 100%;
+  width: 100%;
+}
+
+.toolbar-container {
+  grid-area: toolbar;
+  margin: 1rem 3rem 0 3rem;
 }

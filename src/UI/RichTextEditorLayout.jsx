@@ -1,20 +1,18 @@
 import React from 'react';
 import RichTextEditor from '../RichTextEditor/RichTextEditor';
+import RichTextEditorToolbar from './RichTextEditorToolbar';
 import './RichTextEditorLayout.scss';
 
 class RichTextEditorLayout extends React.PureComponent {
   render() {
     return (
       <div className="editor-layout">
-        <ul className="editor-menu">
-          <li className="editor-menu_item bold">B</li>
-          <li className="editor-menu_item italic">I</li>
-          <li className="editor-menu_item underline">U</li>
-          <li className="editor-menu_item strikethrough">abc</li>
-        </ul>
-        <content className="editor">
+        <div className="toolbar-container">
+          <RichTextEditorToolbar />
+        </div>
+        <div className="editor-container">
           <RichTextEditor />
-        </content>
+        </div>
       </div>
     );
   }

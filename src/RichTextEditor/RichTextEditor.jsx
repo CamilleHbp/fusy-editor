@@ -6,6 +6,7 @@ import * as Hotkeys from '../Constants/Hotkeys';
 import MarkHotkey from './Format/MarkHotkey';
 import RenderMark from './Format/RenderMark';
 import RenderBlock from './Format/RenderBlock';
+import './RichTextEditor.scss';
 
 const plugins = [
   MarkHotkey({ key: 'b', type: 'bold', modKey: Hotkeys.ctrlModKey }),
@@ -31,6 +32,7 @@ class RichTextEditor extends React.Component {
     const { value } = this.state;
     return (
       <Editor
+        className="editor"
         plugins={plugins}
         value={value}
         onChange={this.onChange}
