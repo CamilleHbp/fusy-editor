@@ -1,0 +1,29 @@
+.App {
+  display: grid;
+  grid-template-columns: 50px auto 9fr;
+  grid-template-rows: 8fr auto;
+  grid-template-areas:
+    'sidebar toggle editor'
+    'sidebar footer footer';
+  height: 100vh;
+}
+
+.App-sidebar {
+  grid-area: sidebar;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.App-toggle {
+  grid-area: toggle;
+  overflow: auto;
+}
+
+.App-content {
+  grid-area: editor;
+  overflow: auto;
+}
+
+.App-footer {
+  grid-area: footer;
+}

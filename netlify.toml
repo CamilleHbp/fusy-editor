@@ -4,12 +4,19 @@
   functions = "functions"
   publish = "build"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
-  ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
+# Branch Deploy context: all deploys that are not from a pull/merge request or
+# from the Production branch will inherit these settings.
+[context.staging.environment]
+  NODE_ENV = "production"
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+
+## Uncomment to use this redirect for Single Page Applications like create-react-app. 
+## Not needed for static site generators.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
   
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/netlify-dev-plugin#project-detection

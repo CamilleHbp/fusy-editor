@@ -1,68 +1,80 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fusy-editor
 
-## Available Scripts
+The aim is to produce a text editor [PWA](https://developers.google.com/web/progressive-web-apps/) able to synchronise notes through a propriatery API, EverNote, or OneNote.
 
-In the project directory, you can run:
+# WARNING
 
-### `npm start`
+The project is on hold right now. I implemented the basic editor (you can make the text bold by pressing `ctrl+b` for example).
+I'm learning Webpack 4 and React through simpler projects right now. I will come back in a few weeks, when I feel more confident in taking up such a large project. I on't feel like I know enough about React architecture right now to properly architect everything.
 
-Runs the app in the development mode.<br>
+# TOC
+
+- [Live application](#live-application)
+- [Run the app](#run-the-app)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [How to contribute](#how-to-contribute)
+- [Tech stack](#tech-stack)
+
+## Live application
+
+You can find the most recent prototype at this address: [fusy-editor.netlify.com](https://fusy-editor.netlify.com/)
+
+## Run the app
+
+`npm start` runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+## Testing
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm test` launches the test runner in the interactive watch mode.
+The deployment process runs all tests automatically on each push/pull request for the **dev**, **staging** and **master** branches.
 
-### `npm run build`
+## Deployment
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is deployed automatically through [netlify](https://www.netlify.com/).
+The website is only published when a push/pull request deployment succeeds on master branch.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## How to contribute
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pull requests
 
-### `npm run eject`
+This project follows the [Fork/Pull Request workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Fork the project
+- Checkout master (to start working from the master branch)
+- Create and checkout a feature branch
+- Work on your feature and get it working and passing the tests
+- Clean the git history by rebasing
+- Submit your pull request
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Linting and formatting
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project follows the [AirBnB React guidestyle](https://github.com/airbnb/javascript/tree/master/react) throught the use of [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[lint-staged](https://www.npmjs.com/package/lint-staged) runs eslint and prettier automatically when trying to commit to the repository. If you are able to commit your changes, you should be fine!
 
-## Learn More
+## Tech stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### CRA (Create React App)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Code Splitting
+### Slate.Js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This project uses [Slate.Js](https://github.com/ianstormtaylor/slate/) to build a simple, yet powerful, rich text editor.
 
-### Analyzing the Bundle Size
+### Service Worker
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This project uses a Service Worker](https://developers.google.com/web/fundamentals/primers/service-workers/) to allow an offline experience.
 
-### Making a Progressive Web App
+### IndexedDB
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+This project uses the browser's [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to manage its client-side storage.
 
-### Advanced Configuration
+### Netlify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is deployed and tested automatically through [netlify](https://www.netlify.com/).
