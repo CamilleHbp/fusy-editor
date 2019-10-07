@@ -2,6 +2,11 @@
 
 The aim is to produce a text editor [PWA](https://developers.google.com/web/progressive-web-apps/) able to synchronise notes through a propriatery API, EverNote, or OneNote.
 
+# WARNING
+
+The project is on hold right now. I implemented the basic editor (you can make the text bold by pressing `ctrl+b` for example).
+I'm learning Webpack 4 and React through simpler projects right now. I will come back in a few weeks, when I feel more confident in taking up such a large project. I on't feel like I know enough about React architecture right now to properly architect everything.
+
 # TOC
 
 - [Live application](#live-application)
@@ -58,9 +63,9 @@ This project follows the [AirBnB React guidestyle](https://github.com/airbnb/jav
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Draft.Js
+### Slate.Js
 
-This project uses [Draft.Js](https://draftjs.org/) to build a simple, yet powerful, rich text editor.
+This project uses [Slate.Js](https://github.com/ianstormtaylor/slate/) to build a simple, yet powerful, rich text editor.
 
 ### Service Worker
 

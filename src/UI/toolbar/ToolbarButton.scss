@@ -1,0 +1,15 @@
+.toolbar-button {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.toolbar-button--active {
+  background-color: $toolbar-inactive;
+}
+
+.toolbar-button--active {
+  background-color: $toolbar-active;
+}
+
+.toolbar-button_icon {
+}

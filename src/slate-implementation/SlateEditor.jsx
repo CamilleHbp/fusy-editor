@@ -1,12 +1,12 @@
 import React from 'react';
 import { Editor } from 'slate-react';
 import { Value } from 'slate';
+import './SlateEditor.scss';
+import * as Hotkeys from '../constants/Hotkeys';
 import initialValue from './RichTextEditorInitialValue.json';
-import * as Hotkeys from '../Constants/Hotkeys';
 import MarkHotkey from './Format/MarkHotkey';
 import RenderMark from './Format/RenderMark';
 import RenderBlock from './Format/RenderBlock';
-import './RichTextEditor.scss';
 
 const plugins = [
   MarkHotkey({ key: 'b', type: 'bold', modKey: Hotkeys.ctrlModKey }),
@@ -16,7 +16,7 @@ const plugins = [
   MarkHotkey({ key: 'u', type: 'underline', modKey: Hotkeys.ctrlModKey })
 ];
 
-class RichTextEditor extends React.Component {
+class SlateEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,4 +43,4 @@ class RichTextEditor extends React.Component {
   }
 }
 
-export default RichTextEditor;
+export default SlateEditor;

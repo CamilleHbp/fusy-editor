@@ -1,4 +1,4 @@
-import * as Hotkeys from '../../Constants/Hotkeys';
+import * as Hotkeys from '../../constants/Hotkeys';
 
 function MarkHotkey(options) {
   const { key, type, modKey } = options;

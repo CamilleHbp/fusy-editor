@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from './UI/Sidebar';
-import RichTextEditorLayout from './UI/RichTextEditorLayout';
+import Sidebar from './ui/Sidebar';
+import EditorLayout from './ui/EditorLayout';
 import './App.scss';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Sidebar />
       </header>
       <content className="App-content">
-        <RichTextEditorLayout />
+        <EditorLayout />
       </content>
       <footer className="App-footer" />
     </main>
